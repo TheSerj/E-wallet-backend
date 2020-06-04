@@ -4,16 +4,16 @@
   "description": "Backend of e wallet",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dev mittal",
   "license": "ISC",
   "dependencies": {
+    "express":"*",
     "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.16",
-    "express":"*",
     "body-parser":"*"
   }
 }
