@@ -12,6 +12,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.16"
+    "mongoose": "^5.9.16",
+    "express":"*",
+    "body-parser":"*"
   }
 }
