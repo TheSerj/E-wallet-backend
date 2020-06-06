@@ -38,6 +38,9 @@ authRouter.post('/signup', (req, res)=>{
 
 authRouter.post('/getprofile', (req, res)=>{
     var email = req.body.email;
+    var token = req.body.token;
+    var legit = jwt.verify(token, "secret", {expiresIn: "3hr"});
+    if(legit.email!=email)return;
     profiles.findOne({email:email}).then(data=>{
         res.json(data);
     })
@@ -47,7 +50,6 @@ authRouter.post('/login', (req, res)=>{
     res.setHeader('Content-Type', 'application/json');
     var email = req.body.email;
     var password = req.body.password;
-    console.log(req.body);
     users.findOne({email:email, password:password}).then(data=>{
         if(data){
             const token = jwt.sign(
@@ -65,6 +67,9 @@ authRouter.post('/login', (req, res)=>{
 authRouter.post('/addmoney', (req, res)=>{
     var amount = req.body.amount;
     var email = req.body.email;
+    var token = req.body.token;
+    var legit = jwt.verify(token, "secret", {expiresIn: "3hr"});
+    if(legit.email!=email)return;
     var dateObject = new Date();
     var date = dateObject.toISOString();
 
@@ -87,6 +92,9 @@ authRouter.post('/addmoney', (req, res)=>{
 authRouter.post('/withdrawmoney', (req, res)=>{
     var amount = req.body.amount;
     var email = req.body.email;
+    var token = req.body.token;
+    var legit = jwt.verify(token, "secret", {expiresIn: "3hr"});
+    if(legit.email!=email)return;
     var dateObject = new Date();
     var date = dateObject.toISOString();
 
