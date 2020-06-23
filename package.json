@@ -10,10 +10,11 @@
   "author": "dev mittal",
   "license": "ISC",
   "dependencies": {
-    "express":"*",
+    "body-parser": "*",
     "cors": "^2.8.5",
+    "express": "*",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.16",
-    "body-parser":"*"
+    "path": "^0.12.7"
   }
 }
