@@ -114,7 +114,7 @@ authRouter.post('/withdrawmoney', (req, res)=>{
 });
 
 authRouter.get('/users', (req, res)=>{
-    profiles.find({}, (err, doc)=>{
+    users.find({}, (err, doc)=>{
         res.send(doc);
     });
 });

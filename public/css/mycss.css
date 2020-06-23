@@ -1,0 +1,18 @@
+.body{
+    background:skyblue;  
+}
+.shweta{
+    color: #282828;
+    background:skyblue;
+    display:inline-block;
+    white-space:pre;
+    letter-spacing:0;
+    line-height:1.4;
+    font-family:'Consolas','BitstreamVeraSansMono','CourierNew',Courier,monospace;
+    font-size:4px;
+}
+@media screen and (min-width:1100px){
+    .shweta{
+        font-size:12px;
+    }
+}
