@@ -11,7 +11,7 @@ app.get('/', (req, res)=>{
 })
 app.use('/', authRouter);
 app.use('/dontAskWhy', express.static(path.join(__dirname, './public/')));
-const port = 3001;
+const port = process.env.PORT||3001;
 app.listen(port, ()=>{
     console.log("App is running on 4000");
 })
