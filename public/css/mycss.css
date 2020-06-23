@@ -1,9 +1,9 @@
 .body{
-    background:skyblue;  
+    background:rgb(255, 209, 58);  
 }
 .shweta{
     color: #282828;
-    background:skyblue;
+    background:rgb(255, 209, 58);
     display:inline-block;
     white-space:pre;
     letter-spacing:0;
@@ -13,6 +13,6 @@
 }
 @media screen and (min-width:1100px){
     .shweta{
-        font-size:12px;
+        font-size:13px;
     }
 }
